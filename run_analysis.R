@@ -48,7 +48,7 @@ run_analysis <- function(download_data = TRUE)
 	if (!dplyr_package_is_available)
 	{
 		stop(
-			cat(
+			paste(
 				"Cannot load 'dplyr' library. Possibly package",
 				" is not installed. Execute",
 				"\n\n\tinstall.packages(\"dplyr\")",
@@ -64,7 +64,7 @@ run_analysis <- function(download_data = TRUE)
 		if (download_data)
 		{
 			message(
-				cat(
+				paste(
 					"There is no 'UCI HAR Dataset' folder with a data to process",
 					" present in the working directory.",
 					"\nDownloading required data to the temporary file",
@@ -105,7 +105,7 @@ run_analysis <- function(download_data = TRUE)
 		}
 		else
 		{
-			stop(cat("There is no 'UCI HAR Dataset' folder with a data to",
+			stop(paste("There is no 'UCI HAR Dataset' folder with a data to",
 				"process present in the working directory")
 			)
 		}
@@ -144,7 +144,7 @@ run_analysis <- function(download_data = TRUE)
 	)
 	{
 		stop(
-			cat(
+			paste(
 				"Cannot perform data processing. Obtained data is not correct.",
 				"Please, refer to 'README.md' to see the requirements for",
 				"the appropriate data contents"
@@ -214,7 +214,7 @@ run_analysis <- function(download_data = TRUE)
 	if (anyNA(combined_activity_type))
 	{
 		stop(
-			cat(
+			paste(
 				"There is a discrepancy between documented activity types in",
 				"'activity_labels.txt' and declared activity indexes in",
 				"'y_test.txt' and/or 'y_train.txt'.",

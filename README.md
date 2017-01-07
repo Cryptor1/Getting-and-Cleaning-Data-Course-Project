@@ -122,7 +122,17 @@ an&nbsp;error is produced.
 data&nbsp;files when calculating average for mean and standard&nbsp;deviation
 variables. Also there is no&nbsp;check whether data&nbsp;type is
 *numeric*/*integer* in the&nbsp;mentioned files. Hence it is possible to get
-*NA's* in case of other than mentioned types or in case of data contains *NA's*.
+*NAs* in case of other than mentioned types or in case of data contains *NAs*.
+
+##Tests##
+
+There are some [tests](tests/test_run_analysis.R) added to check whether
+*run\_analysis* function works properly if data&nbsp;set is correct, and
+explicitly fails if data&nbsp;set contents are wrong. To run this test
+[*testthat*](https://cran.r-project.org/web/packages/testthat/index.html)&nbsp;package
+need to be installed. Run *test\_dir("path/to/tests")* where *path/to/tests*
+is the&nbsp;path to *test\_run\_analysis.R* file (**do&nbsp;not&nbsp;include
+this filename itself!**).
 
 ---
 
